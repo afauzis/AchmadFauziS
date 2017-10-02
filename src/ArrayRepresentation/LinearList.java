@@ -20,4 +20,6 @@ public interface LinearList {
    public void trimToSize();
    public Object setSize(int in);
    public Object clear();
+   public Object removedrange(int index, int index2);
+   public Object clone(Object[] copy);
 }

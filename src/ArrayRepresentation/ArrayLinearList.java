@@ -69,7 +69,6 @@ public class ArrayLinearList implements LinearList {
         }
         element[--size] = null;  
         return removedElement;
-
     }
     
     public void add(int index, Object theElement) {
@@ -149,5 +148,31 @@ public class ArrayLinearList implements LinearList {
             element[i] = null;
         }
         return element;
+    }
+    
+    
+    //no9
+    public Object removedrange(int index, int index2) {
+        checkIndex(index);
+        checkIndex(index2);
+        
+        if(index2 > index){
+            for(int i = index2; i > index; i--){
+            remove(i);
+            }
+        }
+        
+        else{
+            System.out.println("Inputan index pertama harus lebih kecil dari yang kedua ");
+        }
+        
+        return remove(index);
+    }
+    
+    // no12
+    public Object clone(Object[] copy){
+        copy = new Object[size];
+        copy = element.clone();
+        return toString();
     }
 }
